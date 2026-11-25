@@ -1,226 +1,196 @@
-# \# LangLearn — AI-Powered Language Learning Platform
 
-# 
+<div align="center">
 
-# LangLearn is a personalised, multilingual language learning platform powered by generative AI and prompt engineering. It provides interactive lessons, contextual translations, vocabulary building, grammar correction and adaptive assessments based on individual learning preferences.
+# LangLearn
 
-# 
+### Learn a new language. One conversation at a time.
 
-# \## Features
+An AI-powered multilingual learning platform that adapts to your language, proficiency, and learning goals.
 
-# 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 
-# \- \*\*AI Tutor:\*\* Personalised multilingual learning and interactive conversations.
+[Features](#features) · [Getting Started](#getting-started) · [Architecture](#architecture) · [Prompt Engineering](#prompt-engineering)
 
-# \- \*\*Vocabulary Builder:\*\* Word meanings, pronunciation and contextual examples.
+</div>
 
-# \- \*\*Grammar Assistant:\*\* Sentence correction with structured explanations.
+---
 
-# \- \*\*Smart Translation:\*\* Context-aware multilingual translation.
+## Overview
 
-# \- \*\*Adaptive Quizzes:\*\* Questions tailored to learner proficiency.
+**LangLearn** is an intelligent language learning platform designed to make language education personalised, interactive, and accessible.
 
-# \- \*\*Conversation Simulator:\*\* Practice through real-world scenarios.
+Powered by generative AI and prompt engineering, LangLearn adapts its responses to the learner's native language, target language, proficiency level, and learning objectives.
 
-# \- \*\*Mistake Analysis:\*\* Identify recurring mistakes and learning weaknesses.
+From everyday conversations to grammar correction and vocabulary practice, everything is available in a single, minimal interface.
 
-# \- \*\*Smart Revision:\*\* Spaced repetition and personalised revision.
+## Features
 
-# \- \*\*Prompt Lab:\*\* Explore and evaluate prompt engineering techniques.
+### Learn
 
-# \- \*\*Offline Learning:\*\* Built-in learning resources when AI services are unavailable.
+| Feature | Description |
+| :--- | :--- |
+| AI Tutor | Personalised lessons and interactive multilingual conversations |
+| Vocabulary | Word meanings, pronunciation, and contextual examples |
+| Grammar | Sentence correction with clear explanations |
+| Translation | Context-aware translation between supported languages |
 
-# \- \*\*Dark and Light Modes:\*\* Responsive and accessible user interface.
+### Practice
 
-# \- \*\*Progress Tracking:\*\* Persistent local learning history.
+| Feature | Description |
+| :--- | :--- |
+| Adaptive Quizzes | Assessments tailored to the learner's proficiency |
+| Conversation Simulator | Real-world scenarios for practical language learning |
+| Mistake Analysis | Identify recurring errors and learning weaknesses |
+| Smart Revision | Spaced repetition and targeted revision |
 
-# 
+### Platform
 
-# \## Prompt Engineering Techniques
+- Personalised learner profiles
+- Multilingual learning support
+- Persistent progress tracking
+- Light and dark themes
+- Responsive and minimal interface
+- Offline learning resources
+- Secure server-side AI integration
 
-# 
+## Getting Started
 
-# \- Role-based prompting
+### Prerequisites
 
-# \- Few-shot prompting
+- Node.js 20.19+ or 22.12+
+- npm
+- Groq API key
 
-# \- Context-aware prompting
+### 1. Clone the repository
 
-# \- Structured output generation
+```bash
+git clone https://github.com/riyanshajoshi/LangLearn.git
+cd LangLearn
+```
 
-# \- Prompt templates
+### 2. Install dependencies
 
-# \- Output validation
+```bash
+npm install
+```
 
-# \- Adaptive difficulty control
+### 3. Configure the AI provider
 
-# \- Prompt evaluation and refinement
+Create a `.env` file in the project root using `.env.example` as a reference.
 
-# 
+```env
+AI_PROVIDER=groq
+GROQ_API_KEY=your_api_key_here
+GROQ_MODEL=qwen/qwen3.8-27b
+```
 
-# \## Technology Stack
+Get your API key from the [Groq Console](https://console.groq.com/keys).
 
-# 
+Use a model available to your Groq account.
 
-# | Technology | Purpose |
+> **Note:** Never commit your `.env` file or API credentials to GitHub.
 
-# |---|---|
+### 4. Start the application
 
-# | React | Frontend interface |
-
-# | Vite | Development and build tooling |
-
-# | JavaScript | Application logic |
-
-# | CSS | Responsive UI and themes |
-
-# | Groq API | AI-generated learning content |
-
-# | Node.js | Server-side AI proxy |
-
-# | Local Storage | Learner preferences and progress |
-
-# 
-
-# \## Installation and Setup
-
-# 
-
-# \### Prerequisites
-
-# 
-
-# \- Node.js and npm
-
-# \- Git
-
-# \- Groq API key
-
-# 
-
-# \### Run Locally
-
-# 
-
-# Install project dependencies:
-
-# 
-
-# ```bash
-
-# npm install
-
-# ```
-
-# 
-
-# Create a `.env` file using `.env.example` and configure your Groq API credentials:
-
-# 
-
-# ```env
-
-# AI\_PROVIDER=groq
-
-# GROQ\_API\_KEY=your\_api\_key\_here
-
-# GROQ\_MODEL=qwen/qwen3.8-27b
-
-# ```
-
-# 
-
-# Obtain an API key from https://console.groq.com/keys.
-
-# 
-
-# Start the development server:
-
-# 
-
-# ```bash
-
-# npm run dev
-
-# ```
-
-# 
-
-# Open http://localhost:5173 in your browser.
-
-# 
-
-# \## Project Structure
-
-# 
-
-# ```text
-
-# LangLearn/
-
-# ├── public/
-
-# ├── server/
-
-# │   └── ai.js
-
-# ├── src/
-
-# │   ├── components/
-
-# │   ├── lib/
-
-# │   ├── App.jsx
-
-# │   ├── Tutor.jsx
-
-# │   ├── Vocabulary.jsx
-
-# │   ├── Grammar.jsx
-
-# │   ├── Translate.jsx
-
-# │   ├── Quiz.jsx
-
-# │   ├── Simulator.jsx
-
-# │   ├── Revision.jsx
-
-# │   └── PromptLab.jsx
-
-# ├── .env.example
-
-# ├── .gitignore
-
-# ├── package.json
-
-# ├── vite.config.js
-
-# └── README.md
-
-# ```
-
-# 
-
-# \## Security and Limitations
-
-# 
-
-# API keys are managed through server-side environment variables and are not committed to the repository.
-
-# 
-
-# AI-generated content depends on provider availability and usage limits. Offline learning supports curated content but does not replace unrestricted AI translation or conversation.
-
-# 
-
-# The application requires a server-side AI proxy for live AI features. Static hosting alone is insufficient.
-
-# 
-
-# \## Academic Project
-
-# 
-
-# Developed as a Prompt Engineering project to demonstrate practical applications of generative AI in personalised education and multilingual learning.
-
+```bash
+npm run dev
+```
+
+Visit **http://localhost:5173** to begin learning.
+
+### Production Build
+
+```bash
+npm run build
+```
+
+Live AI functionality requires the server-side API proxy. Static hosting alone does not support AI requests.
+
+## Architecture
+
+```mermaid
+flowchart TD
+    A[React User Interface] --> B[Learner Profile]
+    B --> C[Prompt Engineering Layer]
+    C --> D[Server-side AI Proxy]
+    D --> E[Groq API]
+    E --> F[Response Validation]
+    F --> G[Personalised Learning Content]
+    G --> A
+    D -. API unavailable .-> H[Offline Learning Resources]
+    H --> A
+    A <--> I[Local Storage]
+```
+
+## Prompt Engineering
+
+LangLearn uses structured prompting techniques to generate consistent, personalised, and context-aware educational content.
+
+| Technique | Application |
+| :--- | :--- |
+| Role Prompting | Establishes the AI as a professional language tutor |
+| Few-Shot Prompting | Provides examples for consistent sentence correction |
+| Contextual Prompting | Adapts responses to learner preferences |
+| Output Formatting | Generates structured lessons and assessments |
+| Adaptive Prompting | Adjusts difficulty according to proficiency |
+| Prompt Evaluation | Tests and refines prompts through Prompt Lab |
+| Output Validation | Checks AI responses before presentation |
+
+## Technology Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| Frontend | React, JavaScript |
+| Styling | CSS |
+| Build Tool | Vite |
+| Server | Node.js |
+| AI Inference | Groq API |
+| Data Persistence | Browser Local Storage |
+
+## Project Structure
+
+```text
+LangLearn/
+├── public/             # Static assets
+├── server/             # Server-side AI integration
+├── src/                # Application source code
+│   ├── components/     # Reusable UI components
+│   └── lib/            # AI utilities and learning logic
+├── .env.example        # Environment configuration template
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## Reliability & Privacy
+
+- API credentials are stored server-side.
+- Learner preferences and progress are stored locally.
+- Built-in resources provide limited offline functionality.
+- AI responses depend on model availability and provider limits.
+- Generated learning content may require verification.
+
+## Future Enhancements
+
+- Speech recognition and pronunciation assessment
+- Expanded multilingual offline lessons
+- Personalised learning roadmaps
+- Cloud-based progress synchronisation
+- Advanced learning analytics
+
+---
+
+<div align="center">
+
+### LangLearn
+
+*Breaking language barriers through intelligent learning.*
+
+Developed as a Prompt Engineering academic project.
+
+</div>
